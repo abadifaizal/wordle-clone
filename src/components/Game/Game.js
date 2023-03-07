@@ -14,7 +14,6 @@ function Game() {
   const [guesses, setGuesses] = React.useState([]);
 
   function handleSubmitGuess(tentativeGuess) {
-    console.log('Recevied guess', tentativeGuess);
     setGuesses([
       ...guesses,
       tentativeGuess
@@ -23,7 +22,7 @@ function Game() {
 
   return (
     <>
-      <GuessResult guesses={guesses} />
+      <GuessResult guesses={guesses} answer={answer} />
       <GuessInput handleSubmitGuess={handleSubmitGuess}/>
     </>
   )
